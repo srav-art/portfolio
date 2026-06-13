@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sravani Thriveditha Gaddam | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    background:rgba(15,23,42,.9);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:4rem;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h2{
+    margin-top:15px;
+    color:#cbd5e1;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:700px;
+    color:#94a3b8;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    line-height:1.8;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:12px 20px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+}
+
+.project h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.contact p{
+    margin:15px 0;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #334155;
+    color:#94a3b8;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+nav ul{
+    display:none;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero img{
+    width:140px;
+    height:140px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Sravani</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <img src="sravs.jpg" alt="Profile">
+
+    <h1>Sravani Gaddam</h1>
+
+    <h2 id="typing"></h2>
+
+   <p>
+Computer Science Engineering student with a CGPA of 8.90.
+Experienced in Frontend Development, Full Stack Development,
+and AI/ML through multiple internships. Passionate about
+building scalable applications, solving real-world problems,
+and exploring Machine Learning and Automation technologies.
+</p>
+
+
+    <div>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="Sravani_Gaddam_Resume.pdf" download class="btn">Download Resume</a>
+    </div>
+
+</section>
+<section class="fade">
+
+<h2 class="title">Highlights</h2>
+
+<div class="skills">
+
+<div class="skill">🎓 CGPA 8.90</div>
+<div class="skill">💼 3 Internships</div>
+<div class="skill">🚀 4 Projects</div>
+<div class="skill">💻 220+ LeetCode Problems</div>
+
+</div>
+
+</section>
+
+<section id="about" class="fade">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="card">
+        I am a recent B.Tech Computer Science graduate with hands-on
+        experience in AI/ML projects and software development.
+        During my internship at SmartBridge, I developed an Online
+        Fraud Detection System using Machine Learning techniques.
+
+        Currently, I am focusing on QA Automation, Selenium,
+        Python, SQL and software testing while preparing for
+        exciting opportunities in the technology industry.
+    </div>
+
+</section>
+<section id="education" class="fade">
+
+<h2 class="title">Education</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>B.Tech Computer Science Engineering</h3>
+<p>Vignan's Lara Institute of Technology and Science</p>
+<p>2022 - 2026</p>
+<p>CGPA: 8.90</p>
+</div>
+
+<div class="project">
+<h3>Intermediate (MPC)</h3>
+<p>Royal Junior College</p>
+<p>2020-2022</p>
+<p>CGPA: 9.3</p>
+</div>
+
+<div class="project">
+<h3>SSC</h3>
+<p>Sri Srinivasa High School</p>
+<p>2022-2026</p>
+<p>CGPA: 9.8</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="fade">
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">Java</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">React.js</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Spring Boot Basics</div>
+        <div class="skill">Python</div>
+        <div class="skill">Gen AI</div>
+
+    </div>
+
+</section>
+
+
+<section id="projects" class="fade">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+
+       <div class="project">
+
+<h3>Online Fraud Detection System</h3>
+
+<p>
+Tech Stack: Python, Machine Learning
+</p>
+
+<ul>
+<li>Fraud transaction detection.</li>
+<li>Model comparison.</li>
+<li>Accuracy improvement.</li>
+<li>Transaction analysis.</li>
+</ul>
+
+</div>
+
+       <div class="project">
+
+<h3>Agri Connect</h3>
+
+<p>
+Tech Stack: HTML, CSS, JavaScript,
+Node.js, Express.js, MongoDB
+</p>
+
+<ul>
+<li>Marketplace connecting farmers and merchants.</li>
+<li>Role-based dashboards.</li>
+<li>Secure authentication.</li>
+<li>Price negotiation system.</li>
+<li>Order tracking features.</li>
+</ul>
+
+</div>
+
+        <div class="project">
+
+<h3>Tailor Notebook</h3>
+
+<p>
+Tech Stack: HTML, CSS, JavaScript,
+Node.js, Express.js, MongoDB
+</p>
+
+<ul>
+<li>Customer measurement management.</li>
+<li>Order tracking dashboard.</li>
+<li>Admin authentication system.</li>
+<li>MongoDB integration.</li>
+</ul>
+
+</div>
+
+    </div>
+    
+
+</section>
+
+<section id="internship" class="fade">
+
+<h2 class="title">Internships</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Frontend Development Intern</h3>
+<h4>Codelevate (Supported by HealBharat)</h4>
+
+<ul>
+<li>Designed responsive webpages.</li>
+<li>Implemented dropdowns, forms and validations.</li>
+<li>Improved UI presentation and browser compatibility.</li>
+<li>Built mobile-friendly layouts.</li>
+</ul>
+</div>
+
+<div class="project">
+<h3>Full Stack Development Intern</h3>
+<h4>SmartBridge</h4>
+
+<ul>
+<li>Developed DocSpot Doctor Appointment System.</li>
+<li>Built responsive interfaces using HTML, CSS and JavaScript.</li>
+<li>Implemented backend appointment scheduling logic.</li>
+<li>Integrated database operations.</li>
+</ul>
+</div>
+
+<div class="project">
+<h3>AI/ML Intern</h3>
+<h4>SmartBridge</h4>
+
+<ul>
+<li>Built Online Fraud Detection System.</li>
+<li>Used Python and Machine Learning techniques.</li>
+<li>Improved fraud detection accuracy.</li>
+<li>Compared multiple ML models.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section id="resume" class="fade">
+
+    <h2 class="title">Resume</h2>
+
+    <div class="card" style="text-align:center;">
+
+        <h3>Download My Resume</h3>
+
+        <br>
+
+        <a href="Sravani_Gaddam_Resume.pdf" download class="btn">
+            Download Resume
+        </a>
+
+    </div>
+
+</section>
+
+<section id="contact" class="fade">
+
+    <h2 class="title">Contact</h2>
+
+    <div class="contact">
+
+        <p>📧 sravanigaddam2004@gmail.com</p>
+
+        <p>📱 8639535336</p>
+
+        <p>
+            💼 LinkedIn:
+            <a href="https://www.linkedin.com/in/sravanigaddam2/" target="_blank">
+                linkedin.com/in/sravanigaddam2
+            </a>
+        </p>
+
+        
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Sravani Gaddam | Portfolio
+</footer>
+
+<script>
+
+const words = [
+"Full Stack Developer",
+"AI/ML Enthusiast",
+"Java Developer",
+"220+ LeetCode Problems Solved",
+"Problem Solver",
+"Future Software Engineer"
+];
+let i = 0;
+
+setInterval(()=>{
+document.getElementById("typing").innerText = words[i];
+i = (i + 1) % words.length;
+},2000);
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
