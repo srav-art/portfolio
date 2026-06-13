@@ -546,6 +546,9 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade").forEach(el => {
     observer.observe(el);
 });
+    function toggleMenu(){
+    document.querySelector("nav ul").classList.toggle("show");
+}
 </script>
 </body>
 </html>
