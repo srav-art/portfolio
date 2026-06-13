@@ -202,6 +202,12 @@ footer{
     opacity:1;
     transform:translateY(0);
 }
+    .menu-icon{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
 
 @media(max-width:768px){
   
@@ -209,7 +215,22 @@ footer{
 nav{
     display:none;
 }
+nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:#1e293b;
+        padding:20px;
+        border-radius:12px;
+        gap:15px;
+        min-width:180px;
+    }
 
+    nav ul.show{
+        display:flex;
+    }
 }
 
 </style>
@@ -219,7 +240,7 @@ nav{
 
 <nav>
     <div class="logo">Sravani</div>
-
+ <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
