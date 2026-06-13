@@ -21,6 +21,7 @@ html{
 }
 
 body{
+    
     background:#0f172a;
     color:white;
     overflow-x:hidden;
@@ -68,7 +69,7 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding-top:60px;
+    padding-top:120px;
 }
 
 .hero img{
@@ -83,7 +84,7 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:4rem;
+    font-size:clamp(2rem,6vw,4rem);
     background:linear-gradient(90deg,#38bdf8,#8b5cf6);
     -webkit-background-clip:text;
     color:transparent;
@@ -202,31 +203,35 @@ footer{
     opacity:1;
     transform:translateY(0);
 }
+    .menu-icon{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
 
 @media(max-width:768px){
-    #typing{
-    font-size:1.3rem;
-    min-height:70px;
-    text-align:center;
-}
+  
 
+.menu-icon{
+    display:block;
+}
 nav ul{
-    display:none;
-}
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:#1e293b;
+        padding:20px;
+        border-radius:12px;
+        gap:15px;
+        min-width:180px;
+    }
 
-.hero h1{
-    font-size:2.5rem;
-}
-
-.hero img{
-    width:170px;
-    height:170px;
-
-    object-fit:cover;
-    object-position:center 15%;
-
-    border-radius:50%;
-}
+    nav ul.show{
+        display:flex;
+    }
 }
 
 </style>
@@ -236,7 +241,7 @@ nav ul{
 
 <nav>
     <div class="logo">Sravani</div>
-
+ <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -542,6 +547,9 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade").forEach(el => {
     observer.observe(el);
 });
+    function toggleMenu(){
+    document.querySelector("nav ul").classList.toggle("show");
+}
 </script>
 </body>
 </html>
